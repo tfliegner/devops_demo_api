@@ -52,5 +52,5 @@ jobs:
       - run: bash .deploy/scripts/packer-install.sh
       - run: cd .deploy/packer && packer validate image.pkr.hcl
       - name: build ami image
-        run: cd ./deploy/packer && packer build image.pkr.hcl
+        run: cd .deploy/packer && packer build image.pkr.hcl
 
