@@ -4,7 +4,7 @@
 set -x
 
 # Install necessary dependencies - install docker - first run update - comments
-sudo apt-get update -y 
+sudo apt-get update -y
 # Update the apt package index and install packages to allow apt to use a repository over HTTPS:
 sudo apt-get install \
     apt-transport-https \
@@ -18,12 +18,12 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo \
   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-# install docker 
+# install docker
 sudo apt-get update -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 # verify the installation by running hello-world image as container
 sudo docker run hello-world
 # login to docker and pull down image
 sudo docker login --username $USERNAME --password $PASSWORD
-sudo docker pull cagarweyne/nomad  
+sudo docker pull thf999/demo
 
